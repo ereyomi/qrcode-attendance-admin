@@ -19,7 +19,7 @@ import { LayoutProps } from 'src/@core/layouts/types'
 import AppBar from './components/vertical/appBar'
 import Navigation from './components/vertical/navigation'
 
-// import Footer from './components/shared-components/footer'
+import Footer from './components/shared-components/footer'
 
 import ScrollToTop from 'src/@core/components/scroll-to-top'
 
@@ -93,8 +93,8 @@ const VerticalLayout = (props: LayoutProps) => {
             {children}
           </ContentWrapper>
 
-          {/* Footer Component */}
-         {/* ereyomi comment footer <Footer {...props} /> */}
+          {/* Footer Component ereyomi comment later */}
+          {<Footer {...props} />}
 
           {/* Portal for React Datepicker */}
           <DatePickerWrapper sx={{ zIndex: 11 }}>
