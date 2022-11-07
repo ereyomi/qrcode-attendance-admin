@@ -3,7 +3,11 @@ import Login from 'mdi-material-ui/Login'
 import Table from 'mdi-material-ui/Table'
 import CubeOutline from 'mdi-material-ui/CubeOutline'
 import HomeOutline from 'mdi-material-ui/HomeOutline'
-import ImageFilterCenterFocusWeak from 'mdi-material-ui/ImageFilterCenterFocusWeak'
+
+// import ImageFilterCenterFocusWeak from 'mdi-material-ui/ImageFilterCenterFocusWeak'
+
+import AccountGroup from 'mdi-material-ui/AccountGroup'
+
 import FormatLetterCase from 'mdi-material-ui/FormatLetterCase'
 import AccountCogOutline from 'mdi-material-ui/AccountCogOutline'
 import CreditCardOutline from 'mdi-material-ui/CreditCardOutline'
@@ -17,11 +21,17 @@ import { VerticalNavItemsType } from 'src/@core/layouts/types'
 const navigation = (): VerticalNavItemsType => {
   return [
     {
-      title: 'QR Generator',
-      icon: ImageFilterCenterFocusWeak,
+      title: 'Students',
+      icon: AccountGroup,
       path: '/'
     },
     {
+      title: 'Lecturers',
+      icon: AccountGroup,
+      path: '/lectures'
+    },
+
+   {
       title: 'Dashboard',
       icon: HomeOutline,
       path: '/dashboad'

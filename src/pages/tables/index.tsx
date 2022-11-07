@@ -36,12 +36,12 @@ const MUITable = () => {
           <TableDense />
         </Card>
       </Grid>
-      <Grid item xs={12}>
+     {/*  <Grid item xs={12}>
         <Card>
           <CardHeader title='Sticky Header' titleTypographyProps={{ variant: 'h6' }} />
           <TableStickyHeader />
         </Card>
-      </Grid>
+      </Grid> */}
       <Grid item xs={12}>
         <Card>
           <CardHeader title='Collapsible Table' titleTypographyProps={{ variant: 'h6' }} />

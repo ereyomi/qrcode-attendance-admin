@@ -16,7 +16,8 @@ import themeConfig from 'src/configs/themeConfig'
 import { LayoutProps } from 'src/@core/layouts/types'
 
 // ** Components
-import AppBar from './components/vertical/appBar'
+// import AppBar from './components/vertical/appBar'
+
 import Navigation from './components/vertical/navigation'
 
 import Footer from './components/shared-components/footer'
@@ -77,7 +78,7 @@ const VerticalLayout = (props: LayoutProps) => {
         />
         <MainContentWrapper className='layout-content-wrapper'>
           {/* AppBar Component */}
-          <AppBar toggleNavVisibility={toggleNavVisibility} {...props} />
+          {/*  <AppBar toggleNavVisibility={toggleNavVisibility} {...props} /> */}
 
           {/* Content */}
           <ContentWrapper
