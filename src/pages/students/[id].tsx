@@ -79,10 +79,6 @@ const Student = () => {
               height: 220,
               padding: 2,
               backgroundColor: 'white',
-              '&:hover': {
-                backgroundColor: 'primary.main',
-                opacity: [0.9, 0.8, 0.7]
-              },
               marginButtom: 10
             }}
           >
