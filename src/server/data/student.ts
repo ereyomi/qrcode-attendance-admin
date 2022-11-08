@@ -1,4 +1,4 @@
-import { DataI } from '../model/student.interface';
+import { DataI } from '../model/student.interface'
 
 export const studentData: DataI[] = [
   {
@@ -6,7 +6,7 @@ export const studentData: DataI[] = [
     matricCode: 'cos/1864/2016',
     firstName: 'Ereyomi',
     lastName: 'Oluwaseyi',
-    attendanceStatus: 'ABSENT',
+    attendanceStatus: 0,
     imgUrl: '/images/avatars/1.png'
   },
   {
@@ -14,7 +14,7 @@ export const studentData: DataI[] = [
     matricCode: 'cos/1111/2016',
     firstName: 'Samuel',
     lastName: 'Bassey',
-    attendanceStatus: 'ABSENT',
+    attendanceStatus: 0,
     imgUrl: '/images/avatars/2.png'
   },
   {
@@ -22,7 +22,7 @@ export const studentData: DataI[] = [
     matricCode: 'cos/0000/2016',
     firstName: 'Esther',
     lastName: 'Abdul',
-    attendanceStatus: 'ABSENT',
+    attendanceStatus: 0,
     imgUrl: '/images/avatars/3.png'
   }
 ]

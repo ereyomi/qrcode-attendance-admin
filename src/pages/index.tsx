@@ -13,13 +13,17 @@ const columnsData: TableColumnI[] = [
   { id: 'firstName', label: 'First Name', minWidth: 170 },
   { id: 'lastName', label: 'Last Name', minWidth: 100 },
   {
-    id: 'attendanceStatus',
-    label: 'Attendance Status',
+    id: 'matricCode',
+    label: 'Matric Code',
     minWidth: 170
   }
 ]
 const ActionColumn = (props: any): JSX.Element => {
-  return <Button size='small' href={ `/students/${props.id}` }>View</Button>
+  return (
+    <Button size='small' href={`/students/${props.id}`}>
+      View
+    </Button>
+  )
 }
 const fetcher = (url: string) => fetch(url).then(res => res.json())
 

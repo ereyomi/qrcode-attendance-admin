@@ -2,7 +2,7 @@ export interface DataI {
   id: string
   firstName: string
   lastName: string
-  attendanceStatus: 'ABSENT' | 'PRESENT'
+  attendanceStatus: 0 | 1,
   imgUrl: string
   matricCode: string
 }
