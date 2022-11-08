@@ -1,34 +1,10 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next/types'
+import { DataI } from 'src/server/model/student.interface'
+import {studentData} from 'src/server/data/student'
 
-type Data = {
-  id: string
-  firstName: string
-  lastName: string
-  attendanceStatus: 'Absent' | 'Present'
-}
-
-export default async function handler(_req: NextApiRequest, res: NextApiResponse<{ data: Data[] }>) {
+export default async function handler(_req: NextApiRequest, res: NextApiResponse<{ data: DataI[] }>) {
   res.status(200).json({
-    data: [
-      {
-        id: 'ereuijbb1',
-        firstName: 'Ereyomi',
-        lastName: 'Oluwaseyi',
-        attendanceStatus: 'Absent'
-      },
-      {
-        id: 'ereuijbb2',
-        firstName: 'Samuel',
-        lastName: 'Bassey',
-        attendanceStatus: 'Absent'
-      },
-      {
-        id: 'ereuijbb3',
-        firstName: 'Esther',
-        lastName: 'Abdul',
-        attendanceStatus: 'Absent'
-      }
-    ]
+    data: studentData
   })
 }

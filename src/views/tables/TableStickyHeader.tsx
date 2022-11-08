@@ -63,7 +63,7 @@ const TableStickyHeader = ({ columns, rowsData, actionColumn }: TableI) => {
                   })}
                   {actionColumn ? (
                     <TableCell key={idx} align={'right'}>
-                      {actionColumn()}
+                      {actionColumn(row)}
                     </TableCell>
                   ) : null}
                 </TableRow>

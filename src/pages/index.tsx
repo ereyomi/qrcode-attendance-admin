@@ -18,8 +18,8 @@ const columnsData: TableColumnI[] = [
     minWidth: 170
   }
 ]
-const ActionColumn = (): JSX.Element => {
-  return <Button size='small' href="/students/2">View</Button>
+const ActionColumn = (props: any): JSX.Element => {
+  return <Button size='small' href={ `/students/${props.id}` }>View</Button>
 }
 const fetcher = (url: string) => fetch(url).then(res => res.json())
 
