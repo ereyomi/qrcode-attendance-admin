@@ -31,15 +31,15 @@ const navigation = (): VerticalNavItemsType => {
       path: '/lectures'
     },
 
-   {
+    {
       title: 'Dashboard',
       icon: HomeOutline,
-      path: '/dashboad'
+      path: '/styleguide/dashboad'
     },
     {
       title: 'Account Settings',
       icon: AccountCogOutline,
-      path: '/account-settings'
+      path: '/styleguide/account-settings'
     },
     {
       sectionTitle: 'Pages'
@@ -47,19 +47,19 @@ const navigation = (): VerticalNavItemsType => {
     {
       title: 'Login',
       icon: Login,
-      path: '/pages/login',
+      path: '/styleguide/pages/login',
       openInNewTab: true
     },
     {
       title: 'Register',
       icon: AccountPlusOutline,
-      path: '/pages/register',
+      path: '/styleguide/pages/register',
       openInNewTab: true
     },
     {
       title: 'Error',
       icon: AlertCircleOutline,
-      path: '/pages/error',
+      path: '/styleguide/pages/error',
       openInNewTab: true
     },
     {
@@ -68,27 +68,27 @@ const navigation = (): VerticalNavItemsType => {
     {
       title: 'Typography',
       icon: FormatLetterCase,
-      path: '/typography'
+      path: '/styleguide/typography'
     },
     {
       title: 'Icons',
-      path: '/icons',
+      path: '/styleguide/icons',
       icon: GoogleCirclesExtended
     },
     {
       title: 'Cards',
       icon: CreditCardOutline,
-      path: '/cards'
+      path: '/styleguide/cards'
     },
     {
       title: 'Tables',
       icon: Table,
-      path: '/tables'
+      path: '/styleguide/tables'
     },
     {
       icon: CubeOutline,
       title: 'Form Layouts',
-      path: '/form-layouts'
+      path: '/styleguide/form-layouts'
     }
   ]
 }

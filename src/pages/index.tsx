@@ -2,6 +2,7 @@ import useSWR from 'swr'
 
 import Grid from '@mui/material/Grid'
 import Card from '@mui/material/Card'
+import Button from '@mui/material/Button'
 import React from 'react'
 import CardHeader from '@mui/material/CardHeader'
 import TableStickyHeader from 'src/views/tables/TableStickyHeader'
@@ -17,6 +18,9 @@ const columnsData: TableColumnI[] = [
     minWidth: 170
   }
 ]
+const ActionColumn = (): JSX.Element => {
+  return <Button size='small' href="/students/2">View</Button>
+}
 const fetcher = (url: string) => fetch(url).then(res => res.json())
 
 const index: NextPage = () => {
@@ -26,14 +30,12 @@ const index: NextPage = () => {
   if (error) return <div>Failed to load</div>
   if (!data) return <div>Loading...</div>
 
-  console.log(data)
-
   return (
     <Grid container spacing={6}>
       <Grid item xs={12}>
         <Card>
           <CardHeader title='Student Table' titleTypographyProps={{ variant: 'h6' }} />
-          <TableStickyHeader columns={columnsData} rowsData={data.data} />
+          <TableStickyHeader columns={columnsData} rowsData={data.data} actionColumn={ActionColumn} />
         </Card>
       </Grid>
     </Grid>

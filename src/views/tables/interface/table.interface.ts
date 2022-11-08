@@ -1,3 +1,5 @@
+import {ReactNode} from 'react'
+
 export interface TableColumnI {
   id: string
   label: string
@@ -8,6 +10,7 @@ export interface TableColumnI {
 
 export interface TableI {
   columns: TableColumnI[]
+  actionColumn?: (props?: any) => ReactNode
   rowsData: {
     id: string
     [x: string]: any

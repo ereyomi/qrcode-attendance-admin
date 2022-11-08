@@ -12,7 +12,7 @@ import TableContainer from '@mui/material/TableContainer'
 import TablePagination from '@mui/material/TablePagination'
 import { TableI } from './interface/table.interface'
 
-const TableStickyHeader = ({ columns, rowsData }: TableI) => {
+const TableStickyHeader = ({ columns, rowsData, actionColumn }: TableI) => {
   // ** States
   const [page, setPage] = useState<number>(0)
   const [rowsPerPage, setRowsPerPage] = useState<number>(10)
@@ -41,6 +41,11 @@ const TableStickyHeader = ({ columns, rowsData }: TableI) => {
                   {column.label}
                 </TableCell>
               ))}
+              {actionColumn ? (
+                <TableCell key={'action'} align={'right'} sx={{ minWidth: 170 }}>
+                  Action
+                </TableCell>
+              ) : null}
             </TableRow>
           </TableHead>
           <TableBody>
@@ -56,6 +61,11 @@ const TableStickyHeader = ({ columns, rowsData }: TableI) => {
                       </TableCell>
                     )
                   })}
+                  {actionColumn ? (
+                    <TableCell key={idx} align={'right'}>
+                      {actionColumn()}
+                    </TableCell>
+                  ) : null}
                 </TableRow>
               )
             })}
