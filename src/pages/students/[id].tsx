@@ -49,6 +49,7 @@ const Student = () => {
 
   if (error) return <div>{error.message}</div>
   if (!data) return <div>Loading...</div>
+  if (data?.data === null) return <div> no data</div>
 
   return (
     <Grid container spacing={6}>

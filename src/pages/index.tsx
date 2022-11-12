@@ -7,7 +7,7 @@ import React from 'react'
 import CardHeader from '@mui/material/CardHeader'
 import TableStickyHeader from 'src/views/tables/TableStickyHeader'
 import { TableColumnI } from 'src/views/tables/interface/table.interface'
-import { NextPage } from 'next'
+import { useRouter } from 'next/router'
 
 const columnsData: TableColumnI[] = [
   { id: 'firstName', label: 'First Name', minWidth: 170 },
@@ -27,8 +27,8 @@ const ActionColumn = (props: any): JSX.Element => {
 }
 const fetcher = (url: string) => fetch(url).then(res => res.json())
 
-const index: NextPage = () => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
+const StudentPage = () => {
+  const router = useRouter()
   const { data, error } = useSWR('/api/students', fetcher)
 
   if (error) return <div>Failed to load</div>
@@ -36,6 +36,11 @@ const index: NextPage = () => {
 
   return (
     <Grid container spacing={6}>
+      <Grid item xs={12}>
+        <Button size='large' variant='contained' sx={{ marginBottom: 7 }} onClick={() => router.push('/students/add')}>
+          Add students
+        </Button>
+      </Grid>
       <Grid item xs={12}>
         <Card>
           <CardHeader title='Student Table' titleTypographyProps={{ variant: 'h6' }} />
@@ -46,4 +51,4 @@ const index: NextPage = () => {
   )
 }
 
-export default index
+export default StudentPage
