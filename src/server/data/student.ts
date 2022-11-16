@@ -6,6 +6,7 @@ export const studentData: DataI[] = [
     matricCode: 'cos/1864/2016',
     firstName: 'Ereyomi',
     lastName: 'Oluwaseyi',
+    email: 'ereyomioluwaseyi@gmail.com',
     attendanceStatus: 0,
     imgUrl: '/images/avatars/1.png'
   },
@@ -14,6 +15,7 @@ export const studentData: DataI[] = [
     matricCode: 'cos/1111/2016',
     firstName: 'Samuel',
     lastName: 'Bassey',
+     email: 'bassey@example.com',
     attendanceStatus: 0,
     imgUrl: '/images/avatars/2.png'
   },
@@ -22,6 +24,7 @@ export const studentData: DataI[] = [
     matricCode: 'cos/0000/2016',
     firstName: 'Esther',
     lastName: 'Abdul',
+     email: 'esther@example.com',
     attendanceStatus: 0,
     imgUrl: '/images/avatars/3.png'
   }
